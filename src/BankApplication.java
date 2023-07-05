@@ -5,9 +5,10 @@ public class BankApplication {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your 'Name' and 'CustomerId' to access your Bank Account:");
         String name = sc.nextLine();
-        String customerId = sc.nextLine();
+        String customerId = sc.nextLine();        
         BankAccount obj1= new BankAccount(name, customerId);
         obj1.menu();
+        sc.close();
     }
 }
 
@@ -63,7 +64,7 @@ class BankAccount{
         do{
             System.out.println("*********************************************");
             System.out.println("Choose an option");
-            option = sc.nextLine().charAt(0);
+            option = sc.nextLine().charAt(0);                     
             System.out.println("\n");
             switch (option) {
                 case 'a' -> {
@@ -98,11 +99,13 @@ class BankAccount{
                     System.out.println("............................");
                     System.out.println("\n");
                     menu();
+                    sc.close();                     
                 }
                 case 'e' -> System.out.println("..........................");
                 default -> System.out.println("Choose a correct option to preceed");
             }
         }while (option != 'e');
             System.out.println("Thank oyu for using our banking services");
+            
     }
 }
