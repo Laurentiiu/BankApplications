@@ -79,7 +79,7 @@ class BankAccount{
                     System.out.println("Enter a amount to deposit : ");
                     System.out.println("............................");
                     String amt = sc.nextLine();
-                    deposit(Double.parseDouble(String.valueOf(amt)));
+                    deposit(Double.parseDouble(amt));
                     System.out.println("\n");
                     menu();
                 }
@@ -105,7 +105,7 @@ class BankAccount{
                 default -> System.out.println("Choose a correct option to preceed");
             }
         }while (option != 'e');
-            System.out.println("Thank oyu for using our banking services");
+            System.out.println("Thank you for using our banking services");
             
     }
 }
