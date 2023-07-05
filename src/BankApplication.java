@@ -105,7 +105,6 @@ class BankAccount{
                 default -> System.out.println("Choose a correct option to preceed");
             }
         }while (option != 'e');
-            System.out.println("Thank you for using our banking services");
-            
+            System.out.println("Thank you for using our banking services");            
     }
 }
