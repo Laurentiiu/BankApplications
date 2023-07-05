@@ -1,5 +1,3 @@
-import java.util.Map;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class BankApplication {
@@ -67,16 +65,15 @@ class BankAccount{
             System.out.println("Choose an option");
             option = sc.nextLine().charAt(0);
             System.out.println("\n");
-            switch (option){
-                case 'a':
+            switch (option) {
+                case 'a' -> {
                     System.out.println("......................");
                     System.out.println("Balance = " + bal);
                     System.out.println("............................");
                     System.out.println("\n");
                     menu();
-
-                    break;
-                case 'b':
+                }
+                case 'b' -> {
                     System.out.println("......................");
                     System.out.println("Enter a amount to deposit : ");
                     System.out.println("............................");
@@ -84,8 +81,8 @@ class BankAccount{
                     deposit(Double.parseDouble(String.valueOf(amt)));
                     System.out.println("\n");
                     menu();
-                    break;
-                case 'c':
+                }
+                case 'c' -> {
                     System.out.println("......................");
                     System.out.println("Enter a amount to Withdraw : ");
                     System.out.println("............................");
@@ -93,23 +90,17 @@ class BankAccount{
                     withdraw(amtW);
                     System.out.println("\n");
                     menu();
-
-                    break;
-                case'd':
+                }
+                case 'd' -> {
                     System.out.println("......................");
                     System.out.println("Previous Transaction: ");
                     getPreviousTrans();
                     System.out.println("............................");
                     System.out.println("\n");
                     menu();
-
-                    break;
-                case 'e':
-                    System.out.println("..........................");
-                    break;
-                default:
-                    System.out.println("Choose a correct option to preceed");
-                    break;
+                }
+                case 'e' -> System.out.println("..........................");
+                default -> System.out.println("Choose a correct option to preceed");
             }
         }while (option != 'e');
             System.out.println("Thank oyu for using our banking services");
